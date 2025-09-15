@@ -11,7 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
+
+steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -24,12 +25,10 @@ jobs:
         run: |
           echo "Building greeter..."
           cd greeter
-          go mod init greeter
           go mod tidy
           go build -v ./...
 
           echo "Building time-service..."
           cd ../time-service
-          go mod init time-service
           go mod tidy
           go build -v ./...
