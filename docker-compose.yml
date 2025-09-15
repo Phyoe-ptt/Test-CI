@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  greeter:
+    build:
+      context: ./greeter
+    ports:
+      - "${GREETER_PORT}:${GREETER_PORT}"
+    depends_on:
+      - time-service
+
+  time-service:
+    build:
+      context: ./time-service
+    ports:
+      - "${TIME_PORT}:${TIME_PORT}"

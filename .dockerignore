@@ -1,0 +1,12 @@
+# Ignore build artifacts
+**/__debug_bin/
+go-app
+*.exe
+
+# Ignore Git files
+.git
+
+# Ignore IDE and editor files
+.vscode
+.idea
+*.log
